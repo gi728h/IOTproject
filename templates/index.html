@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      #chart{
+        display: flex;
+
+      }
+
+    </style>
+
+
+</head>
+<body>
+    <nav class="navbar navbar-light" style="background-color: #c0c3c5;" navbar-expand-lg bg-body-teritary rounded" aria-label="Eleventh navbar example">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExample09">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form role="search">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+      <div>
+        <div class="container" id="sublav" style="margin-top: 50px;" >
+
+                <p class="btn btn-light">private view</p>
+                <p class="btn btn-light">public view</p>
+                <p class="btn btn-light">channel settings</p>
+                <p class="btn btn-light">sharing</p>
+                <p class="btn btn-light">API keys</p>
+                <p class="btn btn-light">data import/export</p>
+                <hr>
+
+
+        </div>
+    </div>
+
+
+  <div id="chart" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="container" style="margin: 100px;">
+      <h3>Field graph</h3>
+        <iframe src="http://192.168.1.6:5000/src2.html" frameborder="0" style="height: 600px; width: 600px; "></iframe>
+    </div>
+
+    <div  class="container" style=" margin-right: 50px;">
+      <h3 style="margin-top: 100px;">Field location</h3>
+        <iframe src="http://192.168.1.6:5000/src.html" frameborder="0" style="height: 600px; width: 600px;"></iframe>
+    </div>
+
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
