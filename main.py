@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from geopy.distance import geodesic
+import os
 
 app = Flask(__name__)
 update = False
@@ -92,22 +93,24 @@ def src2():
 
 @app.route("/markers", methods=['GET'])
 def markers():
-    with open(r"./moderate.txt", "r") as f:
-        moderate = f.readlines()
-    with open(r"./severe.txt", "r") as f:
-        severe = f.readlines()
-
     moderateX = []
     moderateY = []
-    for row in moderate:
-        moderateX.append(row.split(',')[0])
-        moderateY.append(row.split(',')[1])
-
     severeX = []
     severeY = []
-    for row in severe:
-        severeX.append(row.split(',')[0])
-        severeY.append(row.split(',')[1])
+
+    if os.stat(r"./moderate.txt").st_size != 0:
+        with open(r"./moderate.txt", "r") as f:
+            moderate = f.readlines()
+            for row in moderate:
+                moderateX.append(row.split(',')[0])
+                moderateY.append(row.split(',')[1])
+
+    if os.stat(r"./severe.txt").st_size != 0:
+        with open(r"./severe.txt", "r") as f:
+            severe = f.readlines()
+            for row in severe:
+                severeX.append(row.split(',')[0])
+                severeY.append(row.split(',')[1])
 
     json = {
         "moderate": {
